@@ -2,6 +2,10 @@
 
 A **Generative Adversarial Network (GAN)** is a type of deep learning model used to **generate realistic data** by learning the underlying distribution of a dataset.
 
+## Dataset
+- **MNIST**: Handwritten digits dataset with 70,000 grayscale images of size 28x28.  
+- Used for training the GAN to generate new digit images similar to the MNIST dataset.
+
 ## How GANs Work
 
 A GAN consists of **two neural networks** that compete with each other:
@@ -22,20 +26,9 @@ A GAN consists of **two neural networks** that compete with each other:
 3. Generator improves by trying to **fool the discriminator**.
 4. Discriminator improves by trying to **correctly identify real and fake samples**.
 
-This creates a **minimax game**:
-
-\[
-\min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_\text{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_z(z)}[\log(1 - D(G(z)))]
-\]
-
-Where:  
-- \(G\) = Generator  
-- \(D\) = Discriminator  
-- \(x\) = real data  
-- \(z\) = random noise
 
 ## Applications
-- Image generation (e.g., faces, fashion, art)  
+- Image generation (e.g., digits, faces, fashion, art)  
 - Image-to-image translation (e.g., sketch → photo)  
 - Data augmentation  
 - Video generation and super-resolution
